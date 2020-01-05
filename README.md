@@ -29,4 +29,5 @@ These are a work in progress. No, they are not perfect, but they work really wel
 ./tonemap4k.sh inputfile outputfile input_from_cropdetect
   Example: ./tonemap4k.sh test_in.mkv test_out.mkv crop=3840:1600:0:280
   Example output: A cropped (removes black bars) and tonemapped (removes HDR) file.
+  Note: Tone mapping requires a custom ffmpeg build which I have provided above. It was built using all of the options in ffmpeg's CompilationGuide for Ubuntu along with --enable-libzimg.
 ```
