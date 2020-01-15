@@ -24,11 +24,20 @@ These are a work in progress. No, they are not perfect, but they work really wel
   Example output: A cropped video with width of 1280px and aspect ratio equivalent to that of input.
 ```
 
-**tonemap4k.sh - Crops and tonemaps a video file. Codec and bitrate are best used for 4K in this case.**
+**tonemap.sh - Tonemaps a video file. Codec and bitrate are best used for 4K in this case.**
 
 Note: Tone mapping requires a custom ffmpeg build which I have provided above. It was built using all of the options in ffmpeg's [CompilationGuide for Ubuntu](https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu) along with --enable-libzimg.
 ```
-./tonemap4k.sh inputfile outputfile input_from_cropdetect
-  Example: ./tonemap4k.sh test_in.mkv test_out.mkv crop=3840:1600:0:280
+./tonemap.sh inputfile outputfile bitrate
+  Example: ./tonemap4k.sh test_in.mkv test_out.mkv 30M
+  Example output: A tonemapped (removes HDR) file.
+```
+
+**tonemapcrop.sh - Crops and tonemaps a video file. Codec and bitrate are best used for 4K in this case.**
+
+Note: Tone mapping requires a custom ffmpeg build which I have provided above. It was built using all of the options in ffmpeg's [CompilationGuide for Ubuntu](https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu) along with --enable-libzimg.
+```
+./tonemap4k.sh inputfile outputfile input_from_cropdetect bitrate
+  Example: ./tonemap4k.sh test_in.mkv test_out.mkv crop=3840:1600:0:280 30M
   Example output: A cropped (removes black bars) and tonemapped (removes HDR) file.
 ```
