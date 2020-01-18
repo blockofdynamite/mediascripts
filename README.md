@@ -13,7 +13,7 @@ These are a work in progress. No, they are not perfect, but they work really wel
 **cropdetect.sh - Detects crop parameters on a video file for which you want to remove black bars.**
 ```
 ./cropdetect.sh inputfile start_time
-  Example: ./cropdetect.sh test_in.mkv
+  Example: ./cropdetect.sh test_in.mkv 300
   Example output: crop=1920:800:0:140
 ```
 
@@ -37,7 +37,7 @@ Note: Tone mapping requires a custom ffmpeg build. There is a build with the nec
 
 Note: Tone mapping requires a custom ffmpeg build. There is a build with the necessary components conveniently provided [here](https://www.johnvansickle.com/ffmpeg/).
 ```
-./tonemap4k.sh inputfile outputfile input_from_cropdetect bitrate
+./tonemapcrop.sh inputfile outputfile input_from_cropdetect bitrate
   Example: ./tonemap4k.sh test_in.mkv test_out.mkv crop=3840:1600:0:280 30M
   Example output: A cropped (removes black bars) and tonemapped (removes HDR) file.
 ```
