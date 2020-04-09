@@ -41,3 +41,12 @@ Note: Tone mapping requires a custom ffmpeg build. There is a build with the nec
   Example: ./tonemap4k.sh test_in.mkv test_out.mkv crop=3840:1600:0:280 30M
   Example output: A cropped (removes black bars) and tonemapped (removes HDR) file.
 ```
+
+
+**merge.sh - Merges two files. Video from first file, Audio and Subs from second file.**
+
+```
+./merge.sh inputfile1 inputfile2 outputfile
+  Example: ./merge.sh videofilecropped.mp4 videofileoriginal.mkv videofilefinal.mkv
+  Example output: A regular video file.
+```
